@@ -154,6 +154,15 @@ scr_function_t scriptFunctions[] =
 	{"binarybuffer_read", gsc_binarybuffer_read, 0},
 	#endif
 
+	#if COMPILE_SOCKET == 1
+	{"socketInit", gsc_socket_init, 0},
+	{"socketBind", gsc_socket_bind, 0},
+	{"socketConnect", gsc_socket_connect, 0},
+	{"socketSend", gsc_socket_send, 0},
+	{"socketReceive", gsc_socket_receive, 0},
+	{"socketClose", gsc_socket_close, 0},
+	#endif
+
 	#if COMPILE_UTILS == 1
 	{"getSoundaliasesFromFile", gsc_utils_getsoundaliasesfromfile, 0},
 	{"getSoundDuration", gsc_utils_getsoundduration, 0},

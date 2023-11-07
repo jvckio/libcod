@@ -52,6 +52,10 @@
 #include "gsc_level.hpp"
 #endif
 
+#if COMPILE_SOCKET == 1
+#include "gsc_socket.hpp"
+#endif
+
 #if COMPILE_MEMORY == 1
 #include "gsc_memory.hpp"
 #endif

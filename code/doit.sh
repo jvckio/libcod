@@ -115,6 +115,11 @@ if grep -q "COMPILE_LEVEL 1" config.hpp; then
 	$cc $debug $options $constants -c gsc_level.cpp -o objects_$1/gsc_level.opp
 fi
 
+if grep -q "COMPILE_SOCKET 1" config.hpp; then
+	echo "##### COMPILE $1 GSC_SOCKET.CPP #####"
+	$cc $debug $options $constants -c gsc_socket.cpp -o objects_$1/gsc_socket.opp
+fi
+
 if grep -q "COMPILE_MEMORY 1" config.hpp; then
 	echo "##### COMPILE $1 GSC_MEMORY.CPP #####"
 	$cc $debug $options $constants -c gsc_memory.cpp -o objects_$1/gsc_memory.opp
